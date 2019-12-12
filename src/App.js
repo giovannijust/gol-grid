@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import GridOverlay from "components/GridOverlay";
 import Card from "components/Card";
 import MenuItem from "components/MenuItem";
+import CustomCSS from "components/CustomCSS";
 
 function App() {
   const [showOverlay, setOverlay] = useState(true);
@@ -11,6 +12,9 @@ function App() {
   return (
     <>
       <GridOverlay show={showOverlay} />
+      <CustomCSS
+        href={isResponsive ? "index-responsive.css " : "index-fixed.css"}
+      />
       <header className="l-container">
         <div className="menu">
           {/* <MenuItem
@@ -23,9 +27,6 @@ function App() {
             initialState={isResponsive}
             onToggle={toggleStatus => {
               setResponsive(toggleStatus);
-              toggleStatus
-                ? import("styles/build/index-responsive.css")
-                : import("styles/build/index-fixed.css");
             }}
           />
         </div>

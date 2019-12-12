@@ -1,3 +1,4 @@
+var path = require("path");
 var gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps");
 var postcss = require("gulp-postcss");
@@ -43,6 +44,7 @@ function cssResponsive() {
     .pipe(postcss(plugins, { syntax: require("postcss-scss") }))
     .pipe(rename("index-responsive.css"))
     .pipe(gulp.dest("./src/styles/build/"))
+    .pipe(gulp.dest("./public"))
     .pipe(browsersync.stream());
 }
 
@@ -53,6 +55,7 @@ function cssFixed() {
     .pipe(postcss(plugins, { syntax: require("postcss-scss") }))
     .pipe(rename("index-fixed.css"))
     .pipe(gulp.dest("./src/styles/build/"))
+    .pipe(gulp.dest("./public"))
     .pipe(browsersync.stream());
 }
 
