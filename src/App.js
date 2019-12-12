@@ -3,24 +3,34 @@ import React, { useState } from "react";
 import GridOverlay from "components/GridOverlay";
 import Statistics from "components/Statistics";
 import Card from "components/Card";
-import Toggle from "components/Toggle";
+import MenuItem from "components/MenuItem";
+import CustomCSS from "components/CustomCSS";
 
 function App() {
   const [showOverlay, setOverlay] = useState(true);
+  const [isResponsive, setResponsive] = useState(false);
 
   return (
     <>
       <GridOverlay show={showOverlay} />
       <Statistics show={showOverlay} />
+      <CustomCSS
+        href={isResponsive ? "index-responsive.css " : "index-fixed.css"}
+      />
       <header className="l-container">
-        <div className="list">
-          <div className="list-item">
-            <span>Mostrar colunas:</span>
-            <Toggle
-              initialState={showOverlay}
-              onToggle={toggleStatus => setOverlay(toggleStatus)}
-            />
-          </div>
+        <div className="menu">
+          {/* <MenuItem
+            label="Colunas:"
+            initialState={showOverlay}
+            onToggle={toggleStatus => setOverlay(toggleStatus)}
+          /> */}
+          <MenuItem
+            label="Responsivo:"
+            initialState={isResponsive}
+            onToggle={toggleStatus => {
+              setResponsive(toggleStatus);
+            }}
+          />
         </div>
       </header>
       <main>

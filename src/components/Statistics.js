@@ -9,11 +9,11 @@ function Statistics({ show }) {
   const [widthGutters, setWidthGutters] = useState(0);
 
   document.getElementsByTagName("body")[0].onresize = function() {
-    show && updateColumnsAndGutter()
+    updateColumnsAndGutter()
   };
 
   useEffect(() => {
-    show && updateColumnsAndGutter()
+    updateColumnsAndGutter()
   })
 
   const updateColumnsAndGutter = () => {

@@ -1,0 +1,15 @@
+.menu {
+  @include gol-grid-column(1, 3, 3);
+  @include gol-grid-column-push(0, 2, 2);
+  color: $white;
+  text-transform: uppercase;
+
+  &-item {
+    font-size: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+}

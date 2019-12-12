@@ -49,26 +49,6 @@ header {
 }
 
 .l-container {
-  margin: 0 auto;
-}
-.l-container::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-@media only screen and (min-width: 1140px) {
-  .l-container {
-    max-width: 1140px;
-  }
-  .l-container > :first-child {
-    margin-left: 0;
-  }
-  .l-container > div > div:first-child {
-    margin-left: 0;
-  }
-}
-
-.l-container {
   max-width: 288px;
   margin: 0 auto;
 }
@@ -289,52 +269,6 @@ header {
     margin-left: 16px;
     width: 83px;
   }
-}
-
-.list {
-  width: calc(50% - 24px);
-  float: left;
-  margin-left: 16px;
-}
-@media only screen and (min-width: 980px) {
-  .list {
-    width: calc(25% - 20px);
-    float: left;
-    margin-left: 16px;
-    width: calc(67px * 3 + 16px * 2);
-  }
-}
-@media only screen and (min-width: 1140px) {
-  .list {
-    width: calc(25% - 20px);
-    float: left;
-    margin-left: 16px;
-    width: calc(80px * 3 + 16px * 2);
-  }
-}
-.list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.statistics-container {
-  background-color: #fff;
-  border: black 1px solid;
-  position: absolute;
-  bottom: 0;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: black;
 }
 
 .list {

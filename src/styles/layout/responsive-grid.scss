@@ -23,8 +23,21 @@
   }
 
   @include grid-media($grid-desktop) {
-    @include grid-column($desktop);
     width: calc(80px * #{$desktop} + 16px * #{$desktop - 1});
+  }
+}
+
+@mixin gol-grid-column-push($mobile, $desktop-light, $desktop) {
+  @include grid-push($mobile, $grid-mobile);
+
+  @include grid-media($grid-desktop-light) {
+    @include grid-push($desktop-light);
+  }
+
+  @include grid-media($grid-desktop) {
+    margin-left: calc(
+      80px * #{$desktop} + 16px * #{$desktop - 1} + 16px
+    ) !important;
   }
 }
 
