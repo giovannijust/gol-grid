@@ -1,0 +1,10 @@
+.u {
+  &-relative {
+    position: relative;
+  }
+  &-hide-sm {
+    @media screen and (max-width: 980px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+$grid-mobile: (
+  columns: 2,
+  gutter: 16px
+);
+
+$grid-desktop-light: (
+  columns: 12,
+  gutter: 16px,
+  media: 980px
+);
+
+$grid-desktop: (
+  columns: 12,
+  gutter: 16px,
+  media: 1140px
+);
