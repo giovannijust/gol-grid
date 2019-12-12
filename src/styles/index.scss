@@ -9,7 +9,8 @@
 @import "./variables.scss";
 @import "./utils.scss";
 @import "./base.scss";
-@import "./layout.scss";
+// @import "./layout/fixed.scss";
+@import "./layout/responsive-grid.scss";
 
 /**
   Modules
@@ -17,3 +18,4 @@
 @import "./modules/toggle.scss";
 @import "./modules/cards.scss";
 @import "./modules/grid-overlay.scss";
+@import "./modules/list";
