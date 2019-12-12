@@ -2,23 +2,32 @@ import React, { useState } from "react";
 
 import GridOverlay from "components/GridOverlay";
 import Card from "components/Card";
-import Toggle from "components/Toggle";
+import MenuItem from "components/MenuItem";
 
 function App() {
   const [showOverlay, setOverlay] = useState(true);
+  const [isResponsive, setResponsive] = useState(false);
 
   return (
     <>
       <GridOverlay show={showOverlay} />
       <header className="l-container">
         <div className="menu">
-          <div className="menu-item">
-            <span>Mostrar colunas:</span>
-            <Toggle
-              initialState={showOverlay}
-              onToggle={toggleStatus => setOverlay(toggleStatus)}
-            />
-          </div>
+          {/* <MenuItem
+            label="Colunas:"
+            initialState={showOverlay}
+            onToggle={toggleStatus => setOverlay(toggleStatus)}
+          /> */}
+          <MenuItem
+            label="Responsivo:"
+            initialState={isResponsive}
+            onToggle={toggleStatus => {
+              setResponsive(toggleStatus);
+              toggleStatus
+                ? import("styles/build/index-responsive.css")
+                : import("styles/build/index-fixed.css");
+            }}
+          />
         </div>
       </header>
       <main>
