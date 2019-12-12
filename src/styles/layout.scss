@@ -1,5 +1,6 @@
 @mixin gol-grid-container {
   @include grid-container;
+  max-width: 288px;
   margin: 0 auto;
 
   @include grid-media($grid-desktop-light) {

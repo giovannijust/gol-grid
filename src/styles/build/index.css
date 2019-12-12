@@ -37,6 +37,7 @@ body {
 }
 
 .l-container {
+  max-width: 288px;
   margin: 0 auto;
 }
 .l-container::after {
@@ -224,6 +225,7 @@ body {
 }
 
 .grid-overlay {
+  max-width: 288px;
   margin: 0 auto;
   top: 0;
   position: absolute;
