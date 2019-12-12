@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import GridOverlay from "components/GridOverlay";
+import Statistics from "components/Statistics";
 import Card from "components/Card";
 import Toggle from "components/Toggle";
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <GridOverlay show={showOverlay} />
+      <Statistics show={showOverlay} />
       <header className="l-container">
         <div className="list">
           <div className="list-item">
