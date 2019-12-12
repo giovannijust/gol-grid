@@ -11,8 +11,8 @@ function App() {
     <>
       <GridOverlay show={showOverlay} />
       <header className="l-container">
-        <div className="list">
-          <div className="list-item">
+        <div className="menu">
+          <div className="menu-item">
             <span>Mostrar colunas:</span>
             <Toggle
               initialState={showOverlay}

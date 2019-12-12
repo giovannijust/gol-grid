@@ -38,12 +38,13 @@ body {
 }
 
 header {
-  background-color: grey;
+  background-color: #ff6f1f;
   height: 100px;
   padding-top: 20px;
 }
 
 .l-container {
+  max-width: 288px;
   margin: 0 auto;
 }
 .l-container::after {
@@ -51,15 +52,20 @@ header {
   content: "";
   display: block;
 }
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
   .l-container {
-    max-width: 1140px;
+    max-width: 980px;
   }
   .l-container > :first-child {
     margin-left: 0;
   }
   .l-container > div > div:first-child {
     margin-left: 0;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  .l-container {
+    max-width: 1140px;
   }
 }
 
@@ -135,6 +141,7 @@ header {
     width: calc(66.6666666667% - 26.6666666667px);
     float: left;
     margin-left: 16px;
+    width: calc(67px * 8 + 16px * 7);
   }
 }
 @media only screen and (min-width: 1140px) {
@@ -161,6 +168,7 @@ header {
     width: calc(33.3333333333% - 21.3333333333px);
     float: left;
     margin-left: 16px;
+    width: calc(67px * 4 + 16px * 3);
   }
 }
 @media only screen and (min-width: 1140px) {
@@ -183,6 +191,7 @@ header {
     width: calc(33.3333333333% - 21.3333333333px);
     float: left;
     margin-left: 16px;
+    width: calc(67px * 4 + 16px * 3);
   }
 }
 @media only screen and (min-width: 1140px) {
@@ -195,6 +204,7 @@ header {
 }
 
 .grid-overlay {
+  max-width: 288px;
   margin: 0 auto;
   top: 0;
   position: absolute;
@@ -208,15 +218,20 @@ header {
   content: "";
   display: block;
 }
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 980px) {
   .grid-overlay {
-    max-width: 1140px;
+    max-width: 980px;
   }
   .grid-overlay > :first-child {
     margin-left: 0;
   }
   .grid-overlay > div > div:first-child {
     margin-left: 0;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  .grid-overlay {
+    max-width: 1140px;
   }
 }
 .grid-overlay-column {
@@ -231,6 +246,7 @@ header {
     width: calc(8.3333333333% - 17.3333333333px);
     float: left;
     margin-left: 16px;
+    width: calc(67px * 1 + 16px * 0);
   }
 }
 @media only screen and (min-width: 1140px) {
@@ -260,6 +276,7 @@ header {
     width: calc(25% - 20px);
     float: left;
     margin-left: 16px;
+    width: calc(67px * 3 + 16px * 2);
   }
 }
 @media only screen and (min-width: 1140px) {
@@ -271,6 +288,53 @@ header {
   }
 }
 .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu {
+  width: calc(50% - 24px);
+  float: left;
+  margin-left: 16px;
+  margin-left: calc(0% - 16px + 32px);
+}
+@media only screen and (min-width: 980px) {
+  .menu {
+    width: calc(25% - 20px);
+    float: left;
+    margin-left: 16px;
+    width: calc(67px * 3 + 16px * 2);
+  }
+}
+@media only screen and (min-width: 1140px) {
+  .menu {
+    width: calc(25% - 20px);
+    float: left;
+    margin-left: 16px;
+    width: calc(80px * 3 + 16px * 2);
+  }
+}
+@media only screen and (min-width: 980px) {
+  .menu {
+    margin-left: calc( 67px * 3 + 16px * 2 ) !important;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  .menu {
+    margin-left: calc(80px * 3 + 16px * 2) !important;
+  }
+}
+.menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
