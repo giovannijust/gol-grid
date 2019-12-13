@@ -21,8 +21,14 @@ body {
   height: 100vh;
 }
 
+main {
+  margin-top: 138px;
+}
+
 header {
   background-color: $first;
   height: auto;
   padding-top: 20px;
+  position: fixed;
+  width: 100%;
 }
