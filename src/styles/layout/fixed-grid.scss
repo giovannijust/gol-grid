@@ -47,12 +47,12 @@
 
   @include grid-media($grid-desktop-light) {
     margin-left: calc(
-      67px * #{$desktop-light} + 16px * #{$desktop-light - 1}
+      67px * #{$desktop-light} + 16px * #{$desktop-light}
     ) !important;
   }
 
   @include grid-media($grid-desktop) {
-    margin-left: calc(80px * #{$desktop} + 16px * #{$desktop - 1}) !important;
+    margin-left: calc(80px * #{$desktop} + 16px * #{$desktop}) !important;
   }
 }
 

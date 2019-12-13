@@ -7,13 +7,12 @@
       display: none;
     }
   }
+  &-inline-block {
+    display: inline-block;
+  }
 }
 
 .auxiliar-text {
   position: absolute;
   margin-left: 16px;
 }
-
-// .grid-overlay-column {
-//   opacity: .2;
-// }

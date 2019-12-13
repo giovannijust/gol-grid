@@ -1,12 +1,12 @@
 import React from "react";
 
-import Toggle from "components/Toggle";
+import Radio from "components/Radio";
 
-function Menu({ label, initialState, onToggle }) {
+function Menu({ label, initialState, onChange }) {
   return (
     <div className="menu-item">
       <span>{label}</span>
-      <Toggle initialState={initialState} onToggle={onToggle} />
+      <Radio onChange={onChange} />
     </div>
   );
 }
