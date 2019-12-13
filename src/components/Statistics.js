@@ -8,12 +8,14 @@ function Statistics({ show }) {
   const [countGutters, setCountGutters] = useState(0);
   const [widthGutters, setWidthGutters] = useState(0);
 
+  const [space, setSpace] = useState(0)
+
   document.getElementsByTagName("body")[0].onresize = function() {
-    updateColumnsAndGutter()
+    show && updateColumnsAndGutter()
   };
 
   useEffect(() => {
-    updateColumnsAndGutter()
+    show && updateColumnsAndGutter()
   })
 
   const updateColumnsAndGutter = () => {
@@ -38,6 +40,10 @@ function Statistics({ show }) {
 
     setCountGutters(auxCountGutters)
     setWidthGutters(getComputedStyle(allColumns[1], null).marginLeft)
+
+    const utilArea = Number.parseInt(getComputedStyle(document.querySelector(".u-relative"), null).width)
+    const totalArea = Number.parseInt(getComputedStyle(document.querySelector("#root"), null).width)
+    setSpace(totalArea - utilArea)
   }
 
   return (
@@ -45,6 +51,7 @@ function Statistics({ show }) {
       <div className="statistics-container">
         <div>São <b>{countColumns}</b> colunas com <b>{widthColumns}px</b> cada</div>
         <div>São <b>{countGutters}</b> gutters com <b>{widthGutters}</b> cada</div>
+        <div>O espaço que está sobrando é de <b>{space}px</b> no total</div>
       </div>
     )
   );
