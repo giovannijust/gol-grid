@@ -151,7 +151,7 @@ header {
   width: calc(100% - 32px);
   float: left;
   margin-left: 16px;
-  width: 150px;
+  width: auto;
   height: 150px;
   background-image: url(../../assets/aeronave-gol-620x330.jpg);
   background-size: auto 100%;
@@ -187,6 +187,11 @@ header {
 @media only screen and (min-width: 1140px) {
   .card-text {
     width: calc(80px * 4 + 16px * 3);
+  }
+}
+@media only screen and (min-width: 0) {
+  .card-text {
+    margin-left: 0;
   }
 }
 

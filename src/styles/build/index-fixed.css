@@ -49,7 +49,6 @@ header {
 }
 
 .l-container {
-  max-width: 288px;
   margin: 0 auto;
 }
 .l-container::after {
@@ -57,15 +56,20 @@ header {
   content: "";
   display: block;
 }
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 319px) {
   .l-container {
-    max-width: 980px;
+    max-width: 288px;
   }
   .l-container > :first-child {
     margin-left: 0;
   }
   .l-container > div > div:first-child {
     margin-left: 0;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .l-container {
+    max-width: 980px;
   }
 }
 @media only screen and (min-width: 1140px) {
@@ -141,6 +145,14 @@ header {
   -webkit-box-shadow: 9px 15px 25px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 9px 15px 25px 0px rgba(0, 0, 0, 0.75);
 }
+@media only screen and (min-width: 319px) {
+  .card {
+    width: calc(100% - 32px);
+    float: left;
+    margin-left: 16px;
+    width: calc(136px * 2 + 16px * 1);
+  }
+}
 @media only screen and (min-width: 980px) {
   .card {
     width: calc(66.6666666667% - 26.6666666667px);
@@ -161,12 +173,20 @@ header {
   width: calc(100% - 32px);
   float: left;
   margin-left: 16px;
-  width: 150px;
+  width: auto;
   height: 150px;
   background-image: url(../../assets/aeronave-gol-620x330.jpg);
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position-x: center;
+}
+@media only screen and (min-width: 319px) {
+  .card-image {
+    width: calc(100% - 32px);
+    float: left;
+    margin-left: 16px;
+    width: calc(136px * 2 + 16px * 1);
+  }
 }
 @media only screen and (min-width: 980px) {
   .card-image {
@@ -191,6 +211,14 @@ header {
   background-color: #fff;
   text-align: justify;
 }
+@media only screen and (min-width: 319px) {
+  .card-text {
+    width: calc(100% - 32px);
+    float: left;
+    margin-left: 16px;
+    width: calc(136px * 2 + 16px * 1);
+  }
+}
 @media only screen and (min-width: 980px) {
   .card-text {
     width: calc(33.3333333333% - 21.3333333333px);
@@ -207,9 +235,13 @@ header {
     width: calc(80px * 4 + 16px * 3);
   }
 }
+@media only screen and (min-width: 0) {
+  .card-text {
+    margin-left: 0;
+  }
+}
 
 .grid-overlay {
-  max-width: 288px;
   margin: 0 auto;
   top: 0;
   position: absolute;
@@ -223,15 +255,20 @@ header {
   content: "";
   display: block;
 }
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 319px) {
   .grid-overlay {
-    max-width: 980px;
+    max-width: 288px;
   }
   .grid-overlay > :first-child {
     margin-left: 0;
   }
   .grid-overlay > div > div:first-child {
     margin-left: 0;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .grid-overlay {
+    max-width: 980px;
   }
 }
 @media only screen and (min-width: 1140px) {
@@ -245,6 +282,14 @@ header {
   margin-left: 16px;
   background-color: red;
   height: 100vh;
+}
+@media only screen and (min-width: 319px) {
+  .grid-overlay-column {
+    width: calc(50% - 24px);
+    float: left;
+    margin-left: 16px;
+    width: calc(136px * 1 + 16px * 0);
+  }
 }
 @media only screen and (min-width: 980px) {
   .grid-overlay-column {
@@ -275,6 +320,14 @@ header {
   width: calc(50% - 24px);
   float: left;
   margin-left: 16px;
+}
+@media only screen and (min-width: 319px) {
+  .list {
+    width: calc(50% - 24px);
+    float: left;
+    margin-left: 16px;
+    width: calc(136px * 1 + 16px * 0);
+  }
 }
 @media only screen and (min-width: 980px) {
   .list {
@@ -314,6 +367,14 @@ header {
   margin-left: calc(0% - 16px + 32px);
   color: #fff;
   text-transform: uppercase;
+}
+@media only screen and (min-width: 319px) {
+  .menu {
+    width: calc(50% - 24px);
+    float: left;
+    margin-left: 16px;
+    width: calc(136px * 1 + 16px * 0);
+  }
 }
 @media only screen and (min-width: 980px) {
   .menu {

@@ -19,11 +19,11 @@ function App() {
       />
       <header className="l-container">
         <div className="menu">
-          {/* <MenuItem
+          <MenuItem
             label="Colunas:"
             initialState={showOverlay}
             onToggle={toggleStatus => setOverlay(toggleStatus)}
-          /> */}
+          />
           <MenuItem
             label="Responsivo:"
             initialState={isResponsive}
