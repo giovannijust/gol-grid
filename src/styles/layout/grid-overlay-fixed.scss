@@ -13,7 +13,7 @@
     &-column {
       @include gol-grid-column(1, 1, 1);
       background-color: red;
-      height: 1000000vh;
+      height: 300vh;
 
       &:last-child {
         @include grid-media($grid-desktop) {

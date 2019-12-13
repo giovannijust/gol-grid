@@ -5,6 +5,7 @@ import Statistics from "components/Statistics";
 import Card from "components/Card";
 import MenuItem from "components/MenuItem";
 import CustomCSS from "components/CustomCSS";
+import Gallery from "components/Gallery";
 
 window.addEventListener("resize onload", function() {
   const header = document.querySelector("header");
@@ -103,12 +104,16 @@ function App() {
               refletem o produto final.
             </p>
           </div>
-
           <div className="introduction-container">
             <h3 style={{ textAlign: "center" }}>Card com imagem + texto</h3>
           </div>
           <Card />
+
+          <div className="introduction-container">
+            <h3 style={{ textAlign: "center" }}>Galeria de imagens</h3>
+          </div>
         </section>
+        <Gallery />
       </main>
     </>
   );

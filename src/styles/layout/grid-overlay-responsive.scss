@@ -8,12 +8,13 @@
     opacity: 0.2;
     left: 50%;
     z-index: 1;
+    height: 300vh;
     pointer-events: none;
 
     &-column {
       @include gol-grid-column(1, 1, 1);
       background-color: red;
-      height: 1000000vh;
+      height: 300vh;
     }
   }
 }

@@ -1,22 +1,36 @@
 .card {
-  @include gol-grid-column(2, 8, 8);
-  background-color: #fff7f0;
-  min-height: 200px;
+  @include gol-grid-column(2, 6, 6);
+  @include gol-grid-column-push(0, 3, 3);
+  padding: 20px 0;
   box-shadow: 9px 15px 25px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  align-items: center;
 
   &-image {
-    width: 150%;
-    height: 150px;
-    background-image: url(../../assets/aeronave-gol-620x330.jpg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
+    flex: 1;
+    height: 200px;
+    width: 200px;
+    background-image: url(aeronave-gol-620x330.jpg);
+    background-size: cover;
     background-position-x: center;
   }
 
   &-text {
+    flex: 1;
     text-align: justify;
-    @include grid-media($grid-mobile) {
-      @include gol-grid-column-collapse;
+    margin-left: 0 !important;
+    padding: 5px;
+  }
+
+  @include grid-media($grid-desktop-light) {
+    flex-direction: row;
+    height: 200px;
+
+    &-image {
+      flex: 0.6;
     }
   }
 }

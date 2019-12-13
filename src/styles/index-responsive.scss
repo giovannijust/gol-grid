@@ -1,3 +1,9 @@
+$grid-initial: (
+  columns: 2,
+  gutter: 16px,
+  media: 0
+);
+
 $grid-mobile: (
   columns: 2,
   gutter: 16px,
@@ -41,3 +47,4 @@ $grid-desktop: (
 @import "./modules/radio.scss";
 @import "./modules/main.scss";
 @import "./modules/introduction.scss";
+@import "./modules/gallery.scss";
