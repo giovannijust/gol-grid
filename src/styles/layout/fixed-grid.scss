@@ -1,11 +1,10 @@
 @mixin gol-grid-container {
   @include grid-container;
-  max-width: 288px;
+  @include grid-media($grid-initial);
   margin: 0 auto;
 
-  @include grid-media($grid-desktop-light) {
-    max-width: 980px;
-
+  @include grid-media($grid-mobile) {
+    max-width: 288px;
     > :first-child {
       margin-left: 0;
     }
@@ -15,13 +14,22 @@
     }
   }
 
+  @include grid-media($grid-desktop-light) {
+    max-width: 980px;
+  }
+
   @include grid-media($grid-desktop) {
     max-width: 1140px;
   }
 }
 
 @mixin gol-grid-column($mobile, $desktop-light, $desktop) {
-  @include grid-column($mobile, $grid-mobile);
+  @include grid-column($mobile, $grid-initial);
+
+  @include grid-media($grid-mobile) {
+    @include grid-column($mobile);
+    width: calc(136px * #{$mobile} + 16px * #{$mobile - 1});
+  }
 
   @include grid-media($grid-desktop-light) {
     @include grid-column($desktop-light);
@@ -46,6 +54,10 @@
   @include grid-media($grid-desktop) {
     margin-left: calc(80px * #{$desktop} + 16px * #{$desktop - 1}) !important;
   }
+}
+
+@mixin gol-grid-column-collapse() {
+  margin-left: 0;
 }
 
 .l-container {

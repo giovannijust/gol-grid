@@ -6,7 +6,7 @@
 
   &-image {
     @include gol-grid-column(2, 4, 4);
-    width: 150px;
+    width: auto;
     height: 150px;
     background-image: url(../../assets/aeronave-gol-620x330.jpg);
     background-size: auto 100%;
@@ -18,5 +18,8 @@
     @include gol-grid-column(2, 4, 4);
     background-color: #fff;
     text-align: justify;
+    @include grid-media($grid-initial) {
+      @include gol-grid-column-collapse;
+    }
   }
 }

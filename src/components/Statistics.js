@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 function Statistics({ show }) {
-
   const [countColumns, setCountColumns] = useState(0);
   const [widthColumns, setWidthColumns] = useState(0);
 
@@ -19,21 +18,24 @@ function Statistics({ show }) {
   })
 
   const updateColumnsAndGutter = () => {
-    let visibleColumns = 0    
-    let auxCountGutters = 0
+    const allColumns = document.querySelectorAll(".grid-overlay-column");
 
-    const allColumns = document.querySelectorAll(".grid-overlay-column")
+    if (allColumns.length === 0) return;
+
+    let visibleColumns = 0;
+    let auxCountGutters = 0;
 
     allColumns.forEach(el => {
-
-      if(getComputedStyle(el, null).display != "none") {
+      if (getComputedStyle(el, null).display !== "none") {
         visibleColumns += 1;
 
-        if(Number.parseInt(getComputedStyle(el, null).marginLeft) > 0) auxCountGutters += 1;
-
+        if (Number.parseInt(getComputedStyle(el, null).marginLeft) > 0)
+          auxCountGutters += 1;
       }
+    });
 
-    })
+    setCountColumns(visibleColumns);
+    setWidthColumns(allColumns[0].clientWidth);
 
     setCountColumns(visibleColumns)
     setWidthColumns(allColumns[0].clientWidth)
