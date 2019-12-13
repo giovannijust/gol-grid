@@ -44,6 +44,12 @@
   margin-left: 0;
 }
 
+@mixin gol-grid-fix-mobile-margin() {
+  @media (min-width: 319px) and (max-width: 979px) {
+    margin-left: 0;
+  }
+}
+
 .l-container {
   @include gol-grid-container;
 }

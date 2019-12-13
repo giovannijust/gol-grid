@@ -75,7 +75,21 @@ function App() {
             </ul>
           </div>
         </section>
-        <Card />
+        <section className="introduction">
+          <div className="introduction-container">
+            <h2 style={{ textAlign: "center" }}>Showcase</h2>
+            <p>
+              Componentes criados para demonstração. Somente para testar o uso
+              de colunas e como se adaptam em resoluções diferentes. Não
+              refletem o produto final.
+            </p>
+          </div>
+
+          <div className="introduction-container">
+            <h3 style={{ textAlign: "center" }}>Card com imagem + texto</h3>
+          </div>
+          <Card />
+        </section>
       </main>
     </>
   );
