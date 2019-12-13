@@ -118,15 +118,33 @@ body {
 }
 
 main {
-  margin-top: 138px;
+  margin-top: 270px;
+}
+@media only screen and (min-width: 980px) {
+  main {
+    margin-top: 160px;
+  }
 }
 
 header {
-  background-color: #000;
+  background-color: #ff5a00;
   height: auto;
-  padding-top: 20px;
+  padding: 20px;
   position: fixed;
   width: 100%;
+  left: -7px;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #282c34;
+}
+
+h3 {
+  color: #6d6d6d;
 }
 
 .l-container::after {
@@ -253,6 +271,7 @@ header {
   width: 100%;
   opacity: 0.2;
   left: 50%;
+  z-index: 2;
 }
 .grid-overlay::after {
   clear: both;
@@ -344,6 +363,9 @@ header {
   border-radius: 5px;
   padding: 10px;
 }
+.statistics-container > div {
+  margin-bottom: 10px;
+}
 
 .list {
   width: calc(50% - 24px);
@@ -381,9 +403,21 @@ header {
 }
 
 .menu {
+  background-color: #63443b;
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5px;
 }
 .menu::after {
   clear: both;
@@ -433,6 +467,11 @@ header {
     margin-left: calc(80px * 1 + 16px * 1) !important;
   }
 }
+@media (min-width: 319px) and (max-width: 979px) {
+  .menu-column-button {
+    margin-left: 0;
+  }
+}
 .menu-column-statics {
   width: calc(100% - 32px);
   float: left;
@@ -453,29 +492,37 @@ header {
     width: calc(80px * 5 + 16px * 4);
   }
 }
+@media (min-width: 319px) and (max-width: 979px) {
+  .menu-column-statics {
+    margin-left: 0;
+  }
+}
 .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 4px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 10px;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media only screen and (min-width: 319px) {
-  .menu-item {
-    padding: 0 10px;
+@media only screen and (min-width: 980px) {
+  .menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 

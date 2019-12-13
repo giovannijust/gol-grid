@@ -55,13 +55,13 @@ function Statistics({ show }) {
   return (
     <div className="statistics-container">
       <div>
-        São <b>{countColumns}</b> colunas com <b>{widthColumns}px</b> cada
+        <b>{countColumns}</b> colunas com <b>{widthColumns}px</b> cada
       </div>
       <div>
-        São <b>{countGutters}</b> gutters com <b>{widthGutters}</b> cada
+        <b>{countGutters}</b> gutters com <b>{widthGutters}</b> cada
       </div>
       <div>
-        O espaço que está sobrando é de <b>{space}px</b> no total
+        Espaço não utilizado <b>{space}px</b> no total
       </div>
     </div>
   );

@@ -22,13 +22,30 @@ body {
 }
 
 main {
-  margin-top: 138px;
+  margin-top: 270px;
+
+  @include grid-media($grid-desktop-light) {
+    margin-top: 160px;
+  }
 }
 
 header {
   background-color: $first;
   height: auto;
-  padding-top: 20px;
+  padding: 20px;
   position: fixed;
   width: 100%;
+  left: -7px;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #282c34;
+}
+
+h3 {
+  color: #6d6d6d;
 }

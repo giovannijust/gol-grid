@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import GridOverlay from "components/GridOverlay";
 import Statistics from "components/Statistics";
@@ -6,9 +6,28 @@ import Card from "components/Card";
 import MenuItem from "components/MenuItem";
 import CustomCSS from "components/CustomCSS";
 
+window.addEventListener("resize onload", function() {
+  const header = document.querySelector("header");
+  const scrollWidth =
+    document.querySelector("main").offsetWidth - window.screen.width;
+
+  header.style.left = `-${scrollWidth + 8}px`;
+});
+
 function App() {
   const [showOverlay, setOverlay] = useState(false);
   const [isResponsive, setResponsive] = useState(false);
+
+  useEffect(() => {
+    const header = document.querySelector("header");
+    const scrollWidth =
+      document.querySelector("main").offsetWidth - window.screen.width;
+
+    scrollWidth === 0
+      ? (header.style.left = 0)
+      : (header.style.left = `${scrollWidth + 8}px`);
+  });
+
   return (
     <>
       <GridOverlay show={showOverlay} />
