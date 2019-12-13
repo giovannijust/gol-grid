@@ -13,17 +13,16 @@ function App() {
   return (
     <>
       <GridOverlay show={showOverlay} />
-      <Statistics show={showOverlay} />
       <CustomCSS
         href={isResponsive ? "index-responsive.css " : "index-fixed.css"}
       />
       <header className="l-container">
         <div className="menu">
-          <MenuItem
+          {/* <MenuItem
             label="Colunas:"
             initialState={showOverlay}
             onToggle={toggleStatus => setOverlay(toggleStatus)}
-          />
+          /> */}
           <MenuItem
             label="Responsivo:"
             initialState={isResponsive}
@@ -31,6 +30,7 @@ function App() {
               setResponsive(toggleStatus);
             }}
           />
+          <Statistics show={showOverlay} />
         </div>
       </header>
       <main>

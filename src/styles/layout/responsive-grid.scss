@@ -41,6 +41,10 @@
   }
 }
 
+@mixin gol-grid-column-collapse() {
+  margin-left: 0;
+}
+
 .l-container {
   @include gol-grid-container;
 }
