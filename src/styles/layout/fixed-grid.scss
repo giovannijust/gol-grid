@@ -43,7 +43,7 @@
 }
 
 @mixin gol-grid-column-push($mobile, $desktop-light, $desktop) {
-  @include grid-push($mobile, $grid-mobile);
+  @include grid-push($mobile, $grid-initial);
 
   @include grid-media($grid-desktop-light) {
     margin-left: calc(
@@ -58,6 +58,12 @@
 
 @mixin gol-grid-column-collapse() {
   margin-left: 0;
+}
+
+@mixin gol-grid-fix-mobile-margin() {
+  @media (min-width: 319px) and (max-width: 979px) {
+    margin-left: 0;
+  }
 }
 
 .l-container {

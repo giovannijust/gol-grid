@@ -1,0 +1,12 @@
+.introduction {
+  @include gol-grid-container;
+
+  &-container {
+    @include gol-grid-column(2, 8, 8);
+    @include gol-grid-column-push(0, 2, 2);
+    @include gol-grid-fix-mobile-margin;
+
+    padding: 20px;
+    text-align: justify;
+  }
+}
