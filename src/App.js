@@ -29,6 +29,7 @@ function App() {
               initialState={isResponsive}
               onChange={toggleStatus => {
                 setResponsive(toggleStatus);
+                setTimeout(()=> {window.dispatchEvent(new Event('resize'))}, 250)
               }}
             />
           </div>
