@@ -17,7 +17,7 @@ function Statistics({ show }) {
 
   const updateColumnsAndGutter = () => {
     const allColumns = document.querySelectorAll(".grid-overlay-column");
-    console.log(allColumns);
+
     if (allColumns.length === 0) return;
 
     let visibleColumns = 0;
