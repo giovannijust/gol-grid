@@ -1,12 +1,12 @@
 .card {
   @include gol-grid-column(2, 8, 8);
+  background-color: #fff7f0;
   min-height: 200px;
   margin-top: 40px;
   box-shadow: 9px 15px 25px 0px rgba(0, 0, 0, 0.75);
 
   &-image {
-    @include gol-grid-column(2, 4, 4);
-    width: auto;
+    width: 150%;
     height: 150px;
     background-image: url(../../assets/aeronave-gol-620x330.jpg);
     background-size: auto 100%;
@@ -15,10 +15,8 @@
   }
 
   &-text {
-    @include gol-grid-column(2, 4, 4);
-    background-color: #fff;
     text-align: justify;
-    @include grid-media($grid-initial) {
+    @include grid-media($grid-mobile) {
       @include gol-grid-column-collapse;
     }
   }

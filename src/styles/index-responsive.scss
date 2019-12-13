@@ -1,3 +1,21 @@
+$grid-mobile: (
+  columns: 2,
+  gutter: 16px,
+  media: 319px
+);
+
+$grid-desktop-light: (
+  columns: 12,
+  gutter: 16px,
+  media: 980px
+);
+
+$grid-desktop: (
+  columns: 12,
+  gutter: 16px,
+  media: 1140px
+);
+
 /**
   Vendors
 **/
@@ -6,7 +24,6 @@
 /**
   Base
 **/
-@import "./variables.scss";
 @import "./colors.scss";
 @import "./utils.scss";
 @import "./base.scss";
@@ -17,6 +34,8 @@
 **/
 @import "./modules/toggle.scss";
 @import "./modules/cards.scss";
-@import "./modules/grid-overlay.scss";
+@import "./layout/grid-overlay-responsive.scss";
 @import "./modules/list.scss";
 @import "./modules/menu.scss";
+@import "./modules/radio.scss";
+@import "./modules/main.scss";
