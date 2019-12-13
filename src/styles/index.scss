@@ -8,12 +8,10 @@
 **/
 @import "./variables.scss";
 @import "./colors.scss";
+@import "./colors.scss";
 @import "./utils.scss";
 @import "./base.scss";
-@import "./colors.scss";
-// @import "./layout/fixed.scss";
 @import "./layout/responsive-grid.scss";
-@import "./layout/fixed-grid.scss";
 
 /**
   Modules
@@ -25,3 +23,5 @@
 @import "./modules/statistics";
 @import "./modules/list.scss";
 @import "./modules/menu.scss";
+@import "./modules/radio.scss";
+@import "./modules/main.scss";

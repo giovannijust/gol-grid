@@ -7,33 +7,37 @@ import MenuItem from "components/MenuItem";
 import CustomCSS from "components/CustomCSS";
 
 function App() {
-  const [showOverlay, setOverlay] = useState(true);
+  const [showOverlay, setOverlay] = useState(false);
   const [isResponsive, setResponsive] = useState(false);
-
   return (
     <>
       <GridOverlay show={showOverlay} />
-      <Statistics show={showOverlay} />
       <CustomCSS
         href={isResponsive ? "index-responsive.css " : "index-fixed.css"}
       />
-      <header className="l-container">
+      <header>
         <div className="menu">
-          <MenuItem
-            label="Colunas:"
-            initialState={showOverlay}
-            onToggle={toggleStatus => setOverlay(toggleStatus)}
-          />
-          <MenuItem
-            label="Responsivo:"
-            initialState={isResponsive}
-            onToggle={toggleStatus => {
-              setResponsive(toggleStatus);
-            }}
-          />
+          <div className="menu-column-button">
+            <MenuItem
+              label="Colunas:"
+              initialState={showOverlay}
+              onChange={toggleStatus => setOverlay(toggleStatus)}
+            />
+            <MenuItem
+              label="Responsivo:"
+              name="responsive"
+              initialState={isResponsive}
+              onChange={toggleStatus => {
+                setResponsive(toggleStatus);
+              }}
+            />
+          </div>
+          <div className="menu-column-statics">
+            <Statistics show={showOverlay} />
+          </div>
         </div>
       </header>
-      <main>
+      <main className="main">
         <Card />
       </main>
     </>

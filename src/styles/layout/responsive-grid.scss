@@ -1,9 +1,9 @@
 @mixin gol-grid-container {
   @include grid-container;
-  margin: 0 auto;
 
   @include grid-media($grid-desktop) {
-    max-width: 1140px;
+    margin: 0 auto;
+    max-width: 1156px;
 
     > :first-child {
       margin-left: 0;
@@ -19,10 +19,11 @@
   @include grid-column($mobile, $grid-mobile);
 
   @include grid-media($grid-desktop-light) {
-    @include grid-column($desktop-light);
+    @include grid-column($desktop-light, $grid-desktop-light);
   }
 
   @include grid-media($grid-desktop) {
+    @include grid-column($desktop);
     width: calc(80px * #{$desktop} + 16px * #{$desktop - 1});
   }
 }
@@ -35,10 +36,12 @@
   }
 
   @include grid-media($grid-desktop) {
-    margin-left: calc(
-      80px * #{$desktop} + 16px * #{$desktop - 1} + 16px
-    ) !important;
+    margin-left: calc(80px * #{$desktop} + 16px * #{$desktop}) !important;
   }
+}
+
+@mixin gol-grid-column-collapse() {
+  margin-left: 0;
 }
 
 .l-container {

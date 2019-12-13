@@ -1,4 +1,3 @@
-var path = require("path");
 var gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps");
 var postcss = require("gulp-postcss");
@@ -9,6 +8,7 @@ const plugins = [
   require("@csstools/postcss-sass"),
   require("lost"),
   require("postcss-custom-properties"),
+  require("postcss-font-magician"),
   require("autoprefixer")({ browsers: ["> 1%", "last 2 versions"] })
 ];
 

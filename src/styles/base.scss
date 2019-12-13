@@ -11,6 +11,7 @@ body {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: Roboto;
   vertical-align: baseline;
 }
 
@@ -23,6 +24,6 @@ body {
 
 header {
   background-color: $first;
-  height: 100px;
+  height: auto;
   padding-top: 20px;
 }
