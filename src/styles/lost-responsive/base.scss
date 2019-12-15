@@ -1,0 +1,51 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: Roboto;
+  vertical-align: baseline;
+}
+
+#root {
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+main {
+  margin-top: 270px;
+
+  @media screen and (min-width: 980px) {
+    margin-top: 160px;
+  }
+}
+
+header {
+  background-color: $fifth;
+  height: auto;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  left: -7px;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #282c34;
+}
+
+h3 {
+  color: #6d6d6d;
+}

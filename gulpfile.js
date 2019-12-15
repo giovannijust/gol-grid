@@ -37,37 +37,37 @@ function css() {
     .pipe(browsersync.stream());
 }
 
-function cssResponsive() {
+function cssLostResponsive() {
   return gulp
-    .src(["./src/styles/index-responsive.scss"])
+    .src(["./src/styles/lost-responsive.scss"])
     .pipe(sourcemaps.init())
     .pipe(postcss(plugins, { syntax: require("postcss-scss") }))
-    .pipe(rename("index-responsive.css"))
+    .pipe(rename("lost-responsive.css"))
     .pipe(gulp.dest("./src/styles/build/"))
     .pipe(gulp.dest("./public"))
     .pipe(browsersync.stream());
 }
 
-function cssFixed() {
+function cssLostFixed() {
   return gulp
-    .src(["./src/styles/index-fixed.scss"])
+    .src(["./src/styles/lost-fixed.scss"])
     .pipe(sourcemaps.init())
     .pipe(postcss(plugins, { syntax: require("postcss-scss") }))
-    .pipe(rename("index-fixed.css"))
+    .pipe(rename("lost-fixed.css"))
     .pipe(gulp.dest("./src/styles/build/"))
     .pipe(gulp.dest("./public"))
     .pipe(browsersync.stream());
 }
 
 function watchFiles() {
-  gulp.watch("src/styls/*.scss", gulp.series(css, browserSyncReload));
+  gulp.watch("src/styles/*.scss", gulp.series(css, browserSyncReload));
   gulp.watch("dist/*.html", gulp.series(browserSyncReload));
 }
 
 function watchSass() {
   gulp.watch(
     "src/styles/**/*.scss",
-    gulp.parallel([css, cssResponsive, cssFixed])
+    gulp.parallel([cssLostFixed, cssLostResponsive])
   );
 }
 

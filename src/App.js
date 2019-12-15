@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import GridOverlay from "components/GridOverlay";
 import Statistics from "components/Statistics";
@@ -7,33 +7,15 @@ import MenuItem from "components/MenuItem";
 import CustomCSS from "components/CustomCSS";
 import Gallery from "components/Gallery";
 
-window.addEventListener("resize onload", function() {
-  const header = document.querySelector("header");
-  const scrollWidth =
-    document.querySelector("main").offsetWidth - window.screen.width;
-
-  header.style.left = `-${scrollWidth + 8}px`;
-});
-
 function App() {
   const [showOverlay, setOverlay] = useState(false);
   const [isResponsive, setResponsive] = useState(false);
-
-  useEffect(() => {
-    const header = document.querySelector("header");
-    const scrollWidth =
-      document.querySelector("main").offsetWidth - window.screen.width;
-
-    scrollWidth === 0
-      ? (header.style.left = 0)
-      : (header.style.left = `${scrollWidth + 8}px`);
-  });
 
   return (
     <>
       <GridOverlay show={showOverlay} />
       <CustomCSS
-        href={isResponsive ? "index-responsive.css " : "index-fixed.css"}
+        href={isResponsive ? "lost-responsive.css " : "lost-fixed.css"}
       />
       <header>
         <div className="menu">
@@ -60,10 +42,10 @@ function App() {
           </div>
         </div>
       </header>
-      <main className="main">
+      <main>
         <section className="introduction">
-          <h1 style={{ textAlign: "center" }}>Teste de grid</h1>
-          <div className="introduction-container">
+          <div className="introduction-content">
+            <h1 style={{ textAlign: "center" }}>Teste de grid</h1>
             <p>
               Esse site é uma demonstração dos grids propostas pela TV1. Por
               padrão, é aplicado o layout proposto de colunas e tamanhos fixos.
@@ -76,7 +58,7 @@ function App() {
               <li>1140</li>
             </ul>
           </div>
-          <div className="introduction-container">
+          <div className="introduction-content">
             <p>
               Ao pressionar o botão "Responsivo", outra configuração de layout
               aplicado. Ele consiste em colunas fluidas mas ainda baseada no
@@ -95,8 +77,8 @@ function App() {
             </ul>
           </div>
         </section>
-        <section className="introduction">
-          <div className="introduction-container">
+        <section className="showcase">
+          <div className="showcase-introduction">
             <h2 style={{ textAlign: "center" }}>Showcase</h2>
             <p>
               Componentes criados para demonstração. Somente para testar o uso
@@ -104,16 +86,13 @@ function App() {
               refletem o produto final.
             </p>
           </div>
-          <div className="introduction-container">
+          <div className="showcase-demonstration">
             <h3 style={{ textAlign: "center" }}>Card com imagem + texto</h3>
-          </div>
-          <Card />
-
-          <div className="introduction-container">
+            <Card />
             <h3 style={{ textAlign: "center" }}>Galeria de imagens</h3>
+            <Gallery />
           </div>
         </section>
-        <Gallery />
       </main>
     </>
   );

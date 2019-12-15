@@ -1,0 +1,17 @@
+.menu {
+  @include gol-grid-container;
+  background-color: $fifth;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: flex;
+  padding-top: 5px;
+
+  &-column-button {
+    @include gol-grid-column(2, 3, 3);
+  }
+
+  &-column-statics {
+    @include gol-grid-column(2, 5, 5);
+  }
+}

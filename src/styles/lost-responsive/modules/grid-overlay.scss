@@ -7,14 +7,17 @@
     width: 100%;
     opacity: 0.2;
     left: 50%;
-    z-index: 1;
-    height: 300vh;
-    pointer-events: none;
+    z-index: 2;
 
     &-column {
       @include gol-grid-column(1, 1, 1);
       background-color: red;
-      height: 300vh;
+      height: 100000vh;
+
+      &:first-child {
+        @media screen and (min-width: 360px) {
+          margin-left: 16px;
+      }
     }
   }
 }

@@ -1,0 +1,31 @@
+.card {
+  @include gol-grid-column(2, 8, 8);
+  @include gol-grid-offset(0, 2, 2);
+
+  box-shadow: 9px 15px 25px 0px rgba(0, 0, 0, 0.75);
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+
+  &-image {
+    @include gol-grid-column(2, 4, 4);
+    flex: 1;
+    height: 200px;
+    width: 200px;
+    background-image: url(aeronave-gol-620x330.jpg);
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  &-text {
+    @include gol-grid-column(2, 8, 8);
+    flex: 1;
+    text-align: justify;
+    margin-left: 0 !important;
+    padding: 5px;
+  }
+
+  @media screen and (max-width: 980px) {
+    float: none !important;
+  }
+}

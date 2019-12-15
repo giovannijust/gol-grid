@@ -1,0 +1,21 @@
+.gallery {
+  @include gol-grid-container;
+  > :first-child {
+  }
+
+  &-item {
+    @include gol-grid-column(2, 2, 2);
+    border-color: black;
+  }
+
+  &-image {
+    background-image: url(aeronave-gol-620x330.jpg);
+    background-size: cover;
+    background-position-x: center;
+    height: 150px;
+    width: 100%;
+  }
+
+  @include grid-media($grid-desktop-light) {
+  }
+}

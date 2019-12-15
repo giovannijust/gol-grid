@@ -40,4 +40,16 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    window.addEventListener("resize", function(event) {
+      const header = document.querySelector("header");
+      const scrollWidth =
+        document.querySelector("main").offsetWidth - window.screen.width;
+
+      scrollWidth === 0
+        ? (header.style.left = 0)
+        : (header.style.left = `-${scrollWidth}px`);
+      header.style.left = `-${scrollWidth}px`;
+    });
+  </script>
 </html>

@@ -1,7 +1,6 @@
 .gallery {
   @include gol-grid-container;
   > :first-child {
-    margin-left: 16px;
   }
 
   &-item {
@@ -15,11 +14,5 @@
     background-position-x: center;
     height: 150px;
     width: 100%;
-  }
-
-  @include grid-media($grid-desktop-light) {
-    > :first-child {
-      margin-left: 0px;
-    }
   }
 }
