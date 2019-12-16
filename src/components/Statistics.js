@@ -29,7 +29,7 @@ function Statistics({ show }) {
       if (getComputedStyle(el, null).display !== "none") {
         visibleColumns += 1;
 
-        if (Number.parseInt(getComputedStyle(el, null).marginLeft) > 0)
+        if (Number.parseInt(getComputedStyle(el, null).marginRight) > 0)
           auxCountGutters += 1;
       }
     });
@@ -41,7 +41,7 @@ function Statistics({ show }) {
     setWidthColumns(allColumns[0].clientWidth);
 
     setCountGutters(auxCountGutters);
-    setWidthGutters(getComputedStyle(allColumns[1], null).marginLeft);
+    setWidthGutters(getComputedStyle(allColumns[0], null).marginRight);
 
     const utilArea = Number.parseInt(
       getComputedStyle(document.querySelector(".u-relative"), null).width

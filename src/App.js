@@ -46,33 +46,53 @@ function App() {
         <section className="introduction">
           <div className="introduction-content">
             <h1 style={{ textAlign: "center" }}>Teste de grid</h1>
+            <h3>Introdução</h3>
             <p>
-              Esse site é uma demonstração dos grids propostas pela TV1. Por
-              padrão, é aplicado o layout proposto de colunas e tamanhos fixos.
-              Esse padrão consiste em 3 breakpoints, incluindo o "Grid Light".
+              Site com teste de grid para validar layout e breakpoints. Há dois
+              arquivos de estilos csonfigurados: Um "responsivo" e outro "fixo"
+              a qual é possível mudar pressionando os botões do menu acima. O
+              grid é uma solução customizada usando Sass + Postcss gerando
+              colunas usando a técnica mais tradicional com "floats" e
+              "margins". Dependendo de qual browser e versões o publico da GOL
+              usa, podemos adotar técnicas mais modernas e simples para
+              desenvolvimento de Grid. Por enquanto estamos usando um método
+              mais tradicional pensando no pior cenário e priorizando
+              compatibilidade.
+            </p>
+          </div>
+          <div className="introduction-content">
+            <h3>Layout Fixo</h3>
+            <p>
+              Grids configurado conforme especificação da TV1. Ao pressionar o
+              botão "Responsivo", outra configuração de layout aplicado. Ele
+              consiste em colunas fluidas mas ainda baseada no conceito proposto
+              acima. Portanto em mobile há 2 colunas e tambem manatemos o
+              breakpoint do "Grid Layout" apenas para referencia. A partir deste
+              breakpoint, a layout trabalha com 12 colunas se extendo até o
+              limite máximo de largura da tela de 1140px. Essa largura máxima
+              pode ser ampliada se necessário. Por enquanto estamos baseando no
+              comportamento do layout proposto pela TV1.
             </p>
             <ul>
               Breakpoints:
               <li>367px</li>
-              <li>988px</li>
+              <li>988px (desktop light)</li>
               <li>1140</li>
             </ul>
           </div>
           <div className="introduction-content">
+            <h3>Layout Responsivo</h3>
             <p>
-              Ao pressionar o botão "Responsivo", outra configuração de layout
-              aplicado. Ele consiste em colunas fluidas mas ainda baseada no
-              conceito proposto acima. Portanto em mobile há 2 colunas e tambem
-              manatemos o breakpoint do "Grid Layout" apenas para referencia. A
-              partir deste breakpoint, a layout trabalha com 12 colunas se
-              extendo até o limite máximo de largura da tela de 1140px. Essa
-              largura máxima pode ser ampliada se necessário. Por enquanto
-              estamos baseando no comportamento do layout proposto pela TV1.
+              O layout responsivo ele deixa as colunas fluidas enquanto ocupa
+              toda a largura da tela. Esse grid precisa de validação e pode-se
+              definir algumas coisas como por exemplo a largura total por
+              breakpoint. Mantivemos o breakpoint "desktop light" para
+              comparação.
             </p>
             <ul>
               Breakpoints:
               <li>367px</li>
-              <li>988px</li>
+              <li>988px (desktop light)</li>
               <li>1140</li>
             </ul>
           </div>

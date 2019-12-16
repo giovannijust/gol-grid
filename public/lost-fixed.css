@@ -1144,63 +1144,94 @@ h3 {
   }
 }
 @media screen and (min-width: 360px) {
-  .introduction-content h1 {
+  .introduction-content h1,
+.introduction-content h3 {
     width: calc(99.9% * 2/2 - (16px - 16px * 2/2));
   }
-  .introduction-content h1:nth-child(1n) {
+  .introduction-content h1:nth-child(1n),
+.introduction-content h3:nth-child(1n) {
     float: left;
     margin-right: 16px;
     clear: none;
   }
-  .introduction-content h1:last-child {
+  .introduction-content h1:last-child,
+.introduction-content h3:last-child {
     margin-right: 0;
   }
-  .introduction-content h1:nth-child(2n) {
+  .introduction-content h1:nth-child(2n),
+.introduction-content h3:nth-child(2n) {
     margin-right: 0;
     float: right;
   }
-  .introduction-content h1:nth-child(2n + 1) {
+  .introduction-content h1:nth-child(2n + 1),
+.introduction-content h3:nth-child(2n + 1) {
     clear: both;
   }
 }
 @media screen and (min-width: 980px) {
-  .introduction-content h1 {
+  .introduction-content h1,
+.introduction-content h3 {
     width: calc(99.9% * 12/12 - (16px - 16px * 12/12));
   }
-  .introduction-content h1:nth-child(1n) {
+  .introduction-content h1:nth-child(1n),
+.introduction-content h3:nth-child(1n) {
     float: left;
     margin-right: 16px;
     clear: none;
   }
-  .introduction-content h1:last-child {
+  .introduction-content h1:last-child,
+.introduction-content h3:last-child {
     margin-right: 0;
   }
-  .introduction-content h1:nth-child(12n) {
+  .introduction-content h1:nth-child(12n),
+.introduction-content h3:nth-child(12n) {
     margin-right: 0;
     float: right;
   }
-  .introduction-content h1:nth-child(12n + 1) {
+  .introduction-content h1:nth-child(12n + 1),
+.introduction-content h3:nth-child(12n + 1) {
     clear: both;
   }
 }
 @media screen and (min-width: 1140px) {
-  .introduction-content h1 {
+  .introduction-content h1,
+.introduction-content h3 {
     width: calc(99.9% * 12/12 - (16px - 16px * 12/12));
   }
-  .introduction-content h1:nth-child(1n) {
+  .introduction-content h1:nth-child(1n),
+.introduction-content h3:nth-child(1n) {
     float: left;
     margin-right: 16px;
     clear: none;
   }
-  .introduction-content h1:last-child {
+  .introduction-content h1:last-child,
+.introduction-content h3:last-child {
     margin-right: 0;
   }
-  .introduction-content h1:nth-child(12n) {
+  .introduction-content h1:nth-child(12n),
+.introduction-content h3:nth-child(12n) {
     margin-right: 0;
     float: right;
   }
-  .introduction-content h1:nth-child(12n + 1) {
+  .introduction-content h1:nth-child(12n + 1),
+.introduction-content h3:nth-child(12n + 1) {
     clear: both;
+  }
+}
+@media screen and (min-width: 360px) {
+  .introduction-content h3 {
+    margin-left: 0 !important;
+    margin-right: 16px !important;
+  }
+}
+@media screen and (min-width: 980px) {
+  .introduction-content h3 {
+    margin-left: calc(99.9% * (-2/12 * -1) - (16px - 16px * (-2/12 * -1)) + 16px) !important;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .introduction-content h3 {
+    margin-left: calc(99.9% * (-2/12 * -1) - (16px - 16px * (-2/12 * -1)) + 16px) !important;
   }
 }
 .introduction-content p {
