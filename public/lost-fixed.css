@@ -554,7 +554,7 @@ h3 {
 }
 .grid-overlay-column {
   background-color: red;
-  height: 100000vh;
+  height: 700vh;
 }
 @media screen and (min-width: 360px) {
   .grid-overlay-column {
