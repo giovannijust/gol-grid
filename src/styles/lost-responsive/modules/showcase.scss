@@ -2,13 +2,16 @@
   &-content {
     @include gol-grid-container;
     text-align: justify;
-    h1,
-    h3,
-    p,
-    ul {
-      @include gol-grid-column(2, 6, 6);
-      @include gol-grid-offset(0, 3, 3);
+    h1 {
+      @include gol-grid-column(2, 12, 12);
     }
+
+    h3 {
+      @include gol-grid-column(2, 6, 6);
+    }
+  }
+  &-text {
+    @include gol-grid-column(2, 6, 6);
   }
 }
 

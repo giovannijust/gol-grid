@@ -49,3 +49,17 @@ h2 {
 h3 {
   color: #6d6d6d;
 }
+
+hr {
+  @media screen and (min-width: 360px) {
+    max-width: 288px;
+  }
+
+  @media screen and (min-width: 978px) {
+    min-width: 978px;
+  }
+
+  @media screen and (min-width: 1140px) {
+    min-width: 1140px;
+  }
+}

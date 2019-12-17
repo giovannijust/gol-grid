@@ -1,5 +1,8 @@
 .gallery {
   @include gol-grid-container;
+  padding: 10px 0;
+  border: 1px solid #d2d2d2;
+  box-shadow: 20px 17px 5px -12px rgba(0, 0, 0, 0.75);
 
   &-item {
     @include gol-grid-column(2, 2, 2);
@@ -12,8 +15,5 @@
     background-position-x: center;
     height: 150px;
     width: 100%;
-  }
-
-  @include grid-media($grid-desktop-light) {
   }
 }
