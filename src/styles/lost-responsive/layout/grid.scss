@@ -4,6 +4,12 @@
   @media screen and (min-width: 1140px) {
     lost-center: 1140px;
   }
+
+  @media screen and (max-width: 980px) {
+    > :nth-child(2) {
+      float: left !important;
+    }
+  }
 }
 
 @mixin gol-grid-column($mobile, $desktop-light, $desktop) {

@@ -3,23 +3,11 @@
     @include gol-grid-container;
     text-align: justify;
     h1,
-    h3 {
-      @include gol-grid-column(2, 12, 12);
-    }
-
-    h3 {
-      @include gol-grid-offset(0, 2, 2);
-    }
-
-    p {
-      @include gol-grid-column(2, 8, 8);
-      @include gol-grid-offset(0, 2, 2);
-      float: none !important;
-    }
-
+    h3,
+    p,
     ul {
-      @include gol-grid-column(2, 12, 12);
-      @include gol-grid-offset(0, 2, 2);
+      @include gol-grid-column(2, 6, 6);
+      @include gol-grid-offset(0, 3, 3);
     }
   }
 }
@@ -34,9 +22,8 @@
     }
 
     p {
-      @include gol-grid-column(2, 8, 8);
-      @include gol-grid-offset(0, 2, 2);
-      float: none !important;
+      @include gol-grid-column(2, 6, 6);
+      @include gol-grid-offset(0, 3, 3);
     }
   }
 
